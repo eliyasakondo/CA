@@ -183,6 +183,23 @@ public class Module{
                 case 4:
                     break;
                 case 5:
+			      System.out.print("Enter the number of vertices: ");
+        int numVertices = s.nextInt();
+
+        BFS bfs = new BFS(numVertices);
+
+        System.out.print("Enter the number of edges: ");
+        int numEdges = s.nextInt();
+
+        System.out.println("Enter the edges (space-separated):");
+        for (int i = 0; i < numEdges; i++) {
+            int u = s.nextInt();
+            int v = s.nextInt();
+            bfs.addEdge(u, v);
+        }
+        System.out.print("Enter the starting vertex for BFS: ");
+        int startVertex = s.nextInt();
+        bfs.breadthFirstSearch(startVertex);
                     break;
                 case 6:
                     break;
