@@ -202,6 +202,28 @@ public class Module{
         bfs.breadthFirstSearch(startVertex);
                     break;
                 case 6:
+			 
+
+	        System.out.print("Enter the number of vertices: ");
+        	int numVertices = s.nextInt();
+
+        	DFS dfs = new DFS(numVertices);
+
+	        System.out.print("Enter the number of edges: ");
+	        int numEdges = s.nextInt();
+
+        	System.out.println("Enter the edges (space-separated):");
+        	for (int i = 0; i < numEdges; i++) {
+            	int u = s.nextInt();
+            	int v = s.nextInt();
+           	 dfs.addEdge(u, v);
+      	 	 }
+
+        	System.out.print("Enter the starting vertex for DFS: ");
+       		 int startVertex = s.nextInt();	
+
+	        dfs.depthFirstSearch(startVertex);
+			    
                     break;
                 case 7:
                     break;
