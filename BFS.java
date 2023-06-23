@@ -41,28 +41,4 @@ public class BFS {
         }
         System.out.println();
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter the number of vertices: ");
-        int numVertices = scanner.nextInt();
-
-        BFS bfs = new BFS(numVertices);
-
-        System.out.print("Enter the number of edges: ");
-        int numEdges = scanner.nextInt();
-
-        System.out.println("Enter the edges (space-separated):");
-        for (int i = 0; i < numEdges; i++) {
-            int u = scanner.nextInt();
-            int v = scanner.nextInt();
-            bfs.addEdge(u, v);
-        }
-
-        System.out.print("Enter the starting vertex for BFS: ");
-        int startVertex = scanner.nextInt();
-
-        bfs.breadthFirstSearch(startVertex);
-    }
 }
